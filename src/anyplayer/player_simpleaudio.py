@@ -8,14 +8,14 @@ class SimpleaudioPlayer(Player):
 
     def is_available(self) -> bool:
         try:
-            import simpleaudio
+            from simpleaudio import WaveObject
+            self.i_wo = WaveObject
         except ImportError:
             return False
         return True
 
     def start(self) -> None:
-        import simpleaudio as sa
-        self.process = sa.WaveObject.from_wave_file(self.audio).play()
+        self.process = self.i_wo.from_wave_file(self.audio).play()
 
     def run(self) -> int:
         return super().run()

@@ -9,17 +9,17 @@ class PyAudioPlayer(ProcessPlayer):
     def is_available(self) -> bool:
         try:
             import wave
-            import pyaudio
+            self.i_wv = wave
+            from pyaudio import PyAudio
+            self.i_pa = PyAudio
         except ImportError:
             return False
         return True
 
     def run(self) -> int:
-        import wave
-        import pyaudio
         CHUNK = 1024
-        with wave.open(self.audio, 'rb') as wf:
-            p = pyaudio.PyAudio()
+        with self.i_wv.open(self.audio, 'rb') as wf:
+            p = self.i_pa()
             stream = p.open(
                 format=p.get_format_from_width(wf.getsampwidth()),
                 channels=wf.getnchannels(),

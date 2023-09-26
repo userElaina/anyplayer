@@ -8,14 +8,15 @@ class PydubPlayer(ProcessPlayer):
 
     def is_available(self) -> bool:
         try:
-            import pydub
+            from pydub import AudioSegment, playback
+            self.i_as = AudioSegment
+            self.i_pb = playback
         except ImportError:
             return False
         return True
 
     def run(self) -> int:
-        from pydub import AudioSegment, playback
-        playback.play(AudioSegment.from_file(self.audio))
+        self.i_pb.play(self.i_as.from_file(self.audio))
 
 
 add_player('pydub', PydubPlayer)

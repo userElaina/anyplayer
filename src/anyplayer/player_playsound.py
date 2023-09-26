@@ -8,14 +8,14 @@ class PlaysoundPlayer(ProcessPlayer):
 
     def is_available(self) -> bool:
         try:
-            import playsound
+            from playsound import playsound
+            self.i_ps = playsound
         except ImportError:
             return False
         return True
 
     def run(self) -> int:
-        import playsound
-        playsound.playsound(self.audio)
+        self.i_ps(self.audio)
 
 
 add_player('playsound', PlaysoundPlayer)
