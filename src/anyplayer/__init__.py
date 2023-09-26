@@ -3,4 +3,4 @@ from .dicts import realias, is_player, get_player
 from .players import AutoPlayer
 from .p_player import Player
 
-VERSION = 'v0.0.2'
+VERSION = 'v0.0.3'
