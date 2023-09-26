@@ -1,6 +1,6 @@
 [project]
 name = "anyplayer"
-version = "0.0.1"
+version = "0.0.2"
 description = "play audio in any available way"
 readme = "README.rst"
 requires-python = ">=3.7"
