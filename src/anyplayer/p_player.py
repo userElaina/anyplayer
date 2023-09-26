@@ -29,6 +29,8 @@ class Player(metaclass=ABCMeta):
         if not self.is_alive():
             return 0
         self.process.terminate()
+        if not self.is_alive():
+            return 0
         time.sleep(self.clk)
         if not self.is_alive():
             return 0
