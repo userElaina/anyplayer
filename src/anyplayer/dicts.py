@@ -37,10 +37,6 @@ def is_player(player: str) -> bool:
     return realias(player) in __NAME
 
 
-def get_names() -> list:
-    return __NAME.copy()
-
-
 def get_player(player: str, audio: str, clk: float = 0.1) -> Player:
     assert is_player(player)
     player = realias(player)
@@ -52,7 +48,7 @@ def get_available_player(
     audio: str,
     clk: float = 0.1,
     err: bool = False,
-) -> None | Player:
+) -> Player | None:
     if not is_player(player):
         if err:
             raise ValueError('%s is not a player' % player)
@@ -67,7 +63,11 @@ def get_available_player(
     return ans
 
 
-def get_availables() -> list:
+def get_names() -> list[str]:
+    return __NAME.copy()
+
+
+def get_availables() -> list[str]:
     return [i for i in __NAME if get_player(i, '').is_available()]
 
 
