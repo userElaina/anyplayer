@@ -1,8 +1,8 @@
 [project]
 name = "anyplayer"
 version = "0.0.1"
-description = "play audio in any available way."
-readme = "README.md"
+description = "play audio in any available way"
+readme = "README.rst"
 requires-python = ">=3.7"
 license = {file = "LICENSE"}
 keywords = ["audio"]
