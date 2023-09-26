@@ -34,14 +34,15 @@ def test(p: str, a: str) -> None:
     print('end')
 
 
-__FFPLAY = 'ffplay'  # all
+__FFPLAY = 'ffplay'
 __MPV = 'mpv'
 __VLC = 'vlc'
 __MPG123 = 'mpg123'  # mp3
 __CMUS = 'cmus'
 __SIMPLEAUDIO = 'simpleaudio'  # wav
-__PLAYSOUND = 'playsound'  # mp3+wav not_win
-__PYDUB = 'pydub'  # simpleaudio-pyaudio-avplay-ffplay
+__PYAUDIO = 'pyaudio'  # mp3+wav
+__PLAYSOUND = 'playsound'  # mp3+wav
+__PYDUB = 'pydub'  # simpleaudio-pyaudio-ffplay
 __AUTO = 'auto'
 
-test(__SIMPLEAUDIO, BA_WAV)
+test(__AUTO, BA_WAV)
