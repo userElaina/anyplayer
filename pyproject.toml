@@ -15,14 +15,17 @@ classifiers = [
   "Programming Language :: Python :: 3"
 ]
 
-dependencies = []
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+optional-dependencies = {dev = {file = ["requirements_dev.txt"]}}
 
 [project.optional-dependencies]
 simpleaudio = ["simpleaudio"]
 pyaudio = ["pyaudio"]
 playsound = ["playsound2"]
 pydub = ["pydub"]
-debug = ["simpleaudio", "pyaudio", "playsound2", "pydub"]
 
 [project.urls]
 "Homepage" = "https://github.com/userElaina/anyplayer"
