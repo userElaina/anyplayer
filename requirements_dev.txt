@@ -1,7 +1,0 @@
-simpleaudio
-pyaudio
-playsound2
-pydub
-setuptools
-wheel
-twine

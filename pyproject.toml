@@ -1,6 +1,6 @@
 [project]
 name = "anyplayer"
-version = "0.0.2"
+version = "0.0.3"
 description = "play audio in any available way"
 readme = "README.rst"
 requires-python = ">=3.7"
@@ -15,17 +15,14 @@ classifiers = [
   "Programming Language :: Python :: 3"
 ]
 
-dynamic = ["dependencies"]
-
-[tool.setuptools.dynamic]
-dependencies = {file = "requirements.txt"}
-optional-dependencies = {dev = {file = ["requirements_dev.txt"]}}
+dependencies = []
 
 [project.optional-dependencies]
 simpleaudio = ["simpleaudio"]
 pyaudio = ["pyaudio"]
-playsound = ["playsound2"]
+playsound = ["playsound2", "pygobject"]
 pydub = ["pydub"]
+dev = ["simpleaudio", "pyaudio", "playsound2", "pydub"]
 
 [project.urls]
 "Homepage" = "https://github.com/userElaina/anyplayer"
