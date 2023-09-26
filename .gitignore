@@ -22,6 +22,8 @@ __pycache__/
 *.rmvb
 *.ts
 
+*.ogg
+*.mp3
 *.wav
 *.badapple
 
