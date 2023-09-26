@@ -1,12 +1,17 @@
 import time
-from src.anyplayer import get_player, VERSION
-from badapple.builtin_files import BA_BA, BA_MP4,BA_MP3, BA_WAV, ba_get
+
+from badapple.builtin_files import BA_BA, BA_MP4, BA_MP3, BA_WAV, ba_get
+
+from src.anyplayer import get_player, VERSION, get_names, get_availables
 
 
 def test(p: str, a: str) -> None:
+    print('get_names', get_names())
+    print('get_availables', get_availables())
     a = ba_get(a)
     print(VERSION, p, a)
     player = get_player(p, a)
+    print('player', player)
     print('is_available', player.is_available())
     if not player.is_available():
         return
@@ -23,22 +28,20 @@ def test(p: str, a: str) -> None:
         print('before is_alive', player.is_alive())
         player.terminate()
         if player.is_alive():
+            print(0.5)
             time.sleep(0.5)
         print('after is_alive', player.is_alive())
     print('end')
 
 
 __FFPLAY = 'ffplay'  # all
-__AVPLAY = 'avplay'  # all
 __MPV = 'mpv'
 __VLC = 'vlc'
 __MPG123 = 'mpg123'  # mp3
 __CMUS = 'cmus'
 __SIMPLEAUDIO = 'simpleaudio'  # wav
-# __PYAUDIO = 'pyaudio'  # wav
 __PLAYSOUND = 'playsound'  # mp3+wav not_win
 __PYDUB = 'pydub'  # simpleaudio-pyaudio-avplay-ffplay
-
 __AUTO = 'auto'
 
-test(__AUTO, BA_WAV)
+test(__SIMPLEAUDIO, BA_WAV)
