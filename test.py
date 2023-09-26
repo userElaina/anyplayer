@@ -1,11 +1,11 @@
 import time
-from src.anyplayer import get_player
+from src.anyplayer import get_player, VERSION
 from badapple.builtin_files import BA_BA, BA_MP4,BA_MP3, BA_WAV, ba_get
 
 
 def test(p: str, a: str) -> None:
     a = ba_get(a)
-    print(p, a)
+    print(VERSION, p, a)
     player = get_player(p, a)
     print('is_available', player.is_available())
     if not player.is_available():
@@ -22,6 +22,8 @@ def test(p: str, a: str) -> None:
     finally:
         print('before is_alive', player.is_alive())
         player.terminate()
+        if player.is_alive():
+            time.sleep(0.5)
         print('after is_alive', player.is_alive())
     print('end')
 
@@ -33,7 +35,7 @@ __VLC = 'vlc'
 __MPG123 = 'mpg123'  # mp3
 __CMUS = 'cmus'
 __SIMPLEAUDIO = 'simpleaudio'  # wav
-__PYAUDIO = 'pyaudio'  # wav
+# __PYAUDIO = 'pyaudio'  # wav
 __PLAYSOUND = 'playsound'  # mp3+wav not_win
 __PYDUB = 'pydub'  # simpleaudio-pyaudio-avplay-ffplay
 
