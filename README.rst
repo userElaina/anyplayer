@@ -19,7 +19,7 @@ with any supported player:
     python -m pip install anyplayer[dev]
 
 Simple Example
-----
+--------------
 
 .. code-block:: python
 
