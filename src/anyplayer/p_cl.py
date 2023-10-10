@@ -9,7 +9,7 @@ class ClPlayer(Player):
     def __init__(
         self,
         executable: str,
-        args: str | list,
+        args: str,
         audio: str,
         clk: float = 0.1
     ) -> None:

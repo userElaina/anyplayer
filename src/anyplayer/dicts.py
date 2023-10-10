@@ -48,7 +48,7 @@ def get_available_player(
     audio: str,
     clk: float = 0.1,
     err: bool = False,
-) -> Player | None:
+) -> Player:
     if not is_player(player):
         if err:
             raise ValueError('%s is not a player' % player)
@@ -63,11 +63,11 @@ def get_available_player(
     return ans
 
 
-def get_names() -> list[str]:
+def get_names() -> list:
     return __NAME.copy()
 
 
-def get_availables() -> list[str]:
+def get_availables() -> list:
     return [i for i in __NAME if get_player(i, '').is_available()]
 
 
