@@ -6,11 +6,17 @@ Play audio in any available way.
 ``ffplay`` ``mpv`` ``vlc`` ``mpg123`` ``cmus`` ``simpleaudio`` ``pyaudio`` ``playsound`` ``pydub`` ``auto``
 
 Installation
--------
+------------
 
 .. code-block:: shell
 
     python -m pip install anyplayer
+
+with any supported player:
+
+.. code-block:: shell
+
+    python -m pip install anyplayer[dev]
 
 Simple Example
 ----
