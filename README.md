@@ -10,6 +10,12 @@ Play audio in any available way.
 python -m pip install anyplayer
 ```
 
+with any supported player:
+
+```sh
+python -m pip install anyplayer[dev]
+```
+
 ##### Simple Example
 
 ```py
