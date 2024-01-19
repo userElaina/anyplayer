@@ -40,7 +40,6 @@ __CMUS = 'cmus'
 __SIMPLEAUDIO = 'simpleaudio'  # wav
 __PYAUDIO = 'pyaudio'  # mp3+wav
 __PLAYSOUND = 'playsound'  # mp3+wav
-__PYDUB = 'pydub'  # simpleaudio-pyaudio-ffplay
 __AUTO = 'auto'
 
 print(VERSION)
@@ -51,7 +50,6 @@ print('get_availables', get_availables())
 #     test(i, BA_WAV)
 
 test(__PLAYSOUND, BA_WAV)
-test(__PYDUB, BA_WAV)
 test(__FFPLAY, BA_WAV)
 test(__MPV, BA_WAV)
 test(__VLC, BA_WAV)
@@ -60,5 +58,4 @@ test(__CMUS, BA_MP3)
 test(__SIMPLEAUDIO, BA_WAV)
 test(__PYAUDIO, BA_WAV)
 test(__PLAYSOUND, BA_WAV)
-test(__PYDUB, BA_WAV)
 test(__AUTO, BA_WAV)
