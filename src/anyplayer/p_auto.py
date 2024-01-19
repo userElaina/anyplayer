@@ -7,6 +7,8 @@ AUTO = 'auto'
 
 
 class AutoPlayer(Player):
+    name = AUTO
+    alias = ['', None, 'default']
     def __init__(
         self,
         audio: str,
@@ -56,4 +58,4 @@ class AutoPlayer(Player):
         return self.process.terminate()
 
 
-add_player(AUTO, AutoPlayer, ['', None, 'default'])
+add_player(AutoPlayer)

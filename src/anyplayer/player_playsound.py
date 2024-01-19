@@ -3,6 +3,8 @@ from .dicts import add_player
 
 
 class PlaysoundPlayer(ProcessPlayer):
+    name = 'playsound'
+    alias = list()
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__(audio, clk)
 
@@ -23,4 +25,4 @@ class PlaysoundPlayer(ProcessPlayer):
         self.i_ps(self.audio)
 
 
-add_player('playsound', PlaysoundPlayer)
+add_player(PlaysoundPlayer)

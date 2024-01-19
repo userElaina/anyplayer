@@ -2,39 +2,28 @@ from typing import Iterable
 
 from .p_player import Player
 
-__NAME = list()
-__ALIAS = dict()
 __CLASS = dict()
 __RELIAS = dict()
-__RELIAS_FLAG = True
+__RELIAS_FLAG = False
 
 
 def add_player(
-    name: str,
     cls: classmethod,
-    alias: Iterable = list(),
 ) -> None:
-    assert name not in __NAME
-    assert name not in __CLASS
-    assert name not in __ALIAS
-    __NAME.append(name)
-    __CLASS[name] = cls
-    if isinstance(alias, str):
-        __ALIAS[name] = [alias,]
-    else:
-        __ALIAS[name] = [i for i in alias]
+    assert cls.name not in __CLASS
+    __CLASS[cls.name] = cls
 
 
 def realias(player: str) -> str:
     global __RELIAS, __RELIAS_FLAG
-    if __RELIAS_FLAG:
-        __RELIAS_FLAG = False
-        __RELIAS = {j: i for i in __ALIAS for j in __ALIAS[i]}
+    if not __RELIAS_FLAG:
+        __RELIAS = {j: i for i in __CLASS for j in __CLASS[i].alias}
+        __RELIAS_FLAG = True
     return __RELIAS.get(player, player)
 
 
 def is_player(player: str) -> bool:
-    return realias(player) in __NAME
+    return realias(player) in __CLASS
 
 
 def get_player(player: str, audio: str, clk: float = 0.1) -> Player:
@@ -64,14 +53,12 @@ def get_available_player(
 
 
 def get_names() -> list:
-    return __NAME.copy()
+    return list(__CLASS.keys())
 
 
 def get_availables() -> list:
-    return [i for i in __NAME if get_player(i, '').is_available()]
+    return [i for i in __CLASS if get_player(i, '').is_available()]
 
 
-for i in __NAME:
-    assert i in __ALIAS
-    assert i in __CLASS
-assert len(__NAME) == len(__ALIAS) == len(__CLASS)
+for i in __RELIAS:
+    assert __RELIAS[i] in __CLASS

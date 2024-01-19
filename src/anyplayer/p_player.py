@@ -3,6 +3,8 @@ from abc import ABCMeta, abstractmethod
 
 
 class Player(metaclass=ABCMeta):
+    name = 'player'
+    alias = list()
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         self.audio = audio
         self.clk = clk

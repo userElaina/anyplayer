@@ -3,6 +3,8 @@ from .dicts import add_player
 
 
 class PydubPlayer(ProcessPlayer):
+    name = 'pydub'
+    alias = list()
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__(audio, clk)
 
@@ -19,4 +21,4 @@ class PydubPlayer(ProcessPlayer):
         self.i_pb.play(self.i_as.from_file(self.audio))
 
 
-add_player('pydub', PydubPlayer)
+add_player(PydubPlayer)
