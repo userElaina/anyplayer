@@ -6,12 +6,10 @@ from src.anyplayer import get_player, VERSION, get_names, get_availables
 
 
 def test(p: str, a: str) -> None:
-    print('get_names', get_names())
-    print('get_availables', get_availables())
     a = ba_get(a)
-    print(VERSION, p, a)
+    print(a)
     player = get_player(p, a)
-    print('player', player)
+    print(player)
     print('is_available', player.is_available())
     if not player.is_available():
         return
@@ -45,4 +43,22 @@ __PLAYSOUND = 'playsound'  # mp3+wav
 __PYDUB = 'pydub'  # simpleaudio-pyaudio-ffplay
 __AUTO = 'auto'
 
+print(VERSION)
+print('get_names', get_names())
+print('get_availables', get_availables())
+
+# for i in get_names():
+#     test(i, BA_WAV)
+
+test(__PLAYSOUND, BA_WAV)
+test(__PYDUB, BA_WAV)
+test(__FFPLAY, BA_WAV)
+test(__MPV, BA_WAV)
+test(__VLC, BA_WAV)
+test(__MPG123, BA_MP3)
+test(__CMUS, BA_MP3)
+test(__SIMPLEAUDIO, BA_WAV)
+test(__PYAUDIO, BA_WAV)
+test(__PLAYSOUND, BA_WAV)
+test(__PYDUB, BA_WAV)
 test(__AUTO, BA_WAV)
