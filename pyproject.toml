@@ -20,9 +20,8 @@ dependencies = []
 [project.optional-dependencies]
 simpleaudio = ["simpleaudio"]
 pyaudio = ["pyaudio"]
-playsound = ["playsound2", "pygobject"]
-pydub = ["pydub"]
-dev = ["simpleaudio", "pyaudio", "playsound2", "pydub"]
+playsound = ["pygobject", "playsound2"]
+dev = ["simpleaudio", "pyaudio", "playsound2"]
 
 [project.urls]
 "Homepage" = "https://github.com/userElaina/anyplayer"
