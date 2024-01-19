@@ -6,5 +6,4 @@ from .player_cmus import CmusPlayer
 from .player_simpleaudio import SimpleaudioPlayer
 from .player_pyaudio import PyAudioPlayer
 from .player_playsound import PlaysoundPlayer
-from .player_pydub import PydubPlayer
 from .p_auto import AutoPlayer
