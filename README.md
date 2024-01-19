@@ -2,7 +2,7 @@
 
 Play audio in any available way.
 
-`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `pydub` `auto`
+`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `auto`
 
 ##### Installation
 
