@@ -5,6 +5,7 @@ from .dicts import add_player
 class SimpleaudioPlayer(Player):
     name = 'simpleaudio'
     alias = list()
+
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__(audio, clk)
 

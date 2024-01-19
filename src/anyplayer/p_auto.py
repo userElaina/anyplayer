@@ -9,6 +9,7 @@ AUTO = 'auto'
 class AutoPlayer(Player):
     name = AUTO
     alias = ['', None, 'default']
+
     def __init__(
         self,
         audio: str,
