@@ -8,7 +8,7 @@ AUTO = 'auto'
 
 class AutoPlayer(Player):
     name = AUTO
-    alias = ['', None, 'default']
+    alias = ['', 'default', 0, '0']
 
     def __init__(
         self,
