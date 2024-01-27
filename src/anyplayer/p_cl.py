@@ -21,7 +21,7 @@ class ClPlayer(Player):
         self.head = executable + ' ' + args + '"%s"'
         super().__init__(audio, clk)
 
-    def is_available(self) -> None:
+    def is_available(self) -> bool:
         if which(self.executable):
             return True
         else:
@@ -34,11 +34,5 @@ class ClPlayer(Player):
             stderr=subprocess.DEVNULL
         )
 
-    def run(self) -> int:
-        return super().run()
-
     def is_alive(self) -> bool:
         return self.process.poll() is None
-
-    def terminate(self) -> int:
-        return super().terminate()

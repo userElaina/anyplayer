@@ -20,9 +20,6 @@ class SimpleaudioPlayer(Player):
     def start(self) -> None:
         self.process = self.i_wo.from_wave_file(self.audio).play()
 
-    def run(self) -> int:
-        return super().run()
-
     def is_alive(self) -> bool:
         return self.process.is_playing()
 

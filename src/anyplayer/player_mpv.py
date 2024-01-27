@@ -9,7 +9,7 @@ class MpvPlayer(ClPlayer):
     alias = list()
 
     def __init__(self, audio: str, clk: float = 0.1) -> None:
-        super().__init__(MPV, '--no-video', audio, clk)
+        super().__init__(MPV, '--no-video', audio, clk)  # --no-terminal
 
 
 add_player(MpvPlayer)

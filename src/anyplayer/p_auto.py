@@ -49,12 +49,6 @@ class AutoPlayer(Player):
                 raise e
         raise RuntimeError()
 
-    def run(self) -> int:
-        return super().run()
-
-    def is_alive(self) -> bool:
-        return super().is_alive()
-
     def terminate(self) -> int:
         return self.process.terminate()
 

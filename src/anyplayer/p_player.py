@@ -18,16 +18,9 @@ class Player(metaclass=ABCMeta):
     def start(self) -> None:
         pass
 
-    @abstractmethod
-    def run(self) -> int:
-        self.start()
-        self.wait()
-
-    @abstractmethod
     def is_alive(self) -> bool:
         return self.process.is_alive()
 
-    @abstractmethod
     def terminate(self) -> int:
         if not self.is_alive():
             return 0
@@ -43,16 +36,24 @@ class Player(metaclass=ABCMeta):
     def kill(self) -> int:
         return self.terminate()
 
-    def wait(self, s: float = -1.) -> int:
+    def wait(self, s: float = -1.) -> float:
+        t = time.time()
         try:
             if s < 0:
-                while self.is_alive():
-                    time.sleep(self.clk)
+                self.join()
             else:
-                t = time.time()
                 while time.time()-t < s and self.is_alive():
                     time.sleep(self.clk)
         except KeyboardInterrupt:
             pass
         finally:
-            return self.terminate()
+            self.terminate()
+            return time.time()-t
+
+    def join(self) -> None:
+        while self.is_alive():
+            time.sleep(self.clk)
+
+    def run(self) -> float:
+        self.start()
+        return self.join()

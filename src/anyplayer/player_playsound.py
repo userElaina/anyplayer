@@ -22,8 +22,9 @@ class PlaysoundPlayer(ProcessPlayer):
             return False
         return True
 
-    def run(self) -> int:
+    def run(self) -> float:
         self.i_ps(self.audio)
+        return 0.
 
 
 add_player(PlaysoundPlayer)

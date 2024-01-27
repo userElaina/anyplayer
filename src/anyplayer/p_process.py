@@ -1,6 +1,7 @@
 import multiprocessing
 
 from .p_player import Player
+from abc import abstractmethod
 
 
 class ProcessPlayer(Player):
@@ -11,8 +12,6 @@ class ProcessPlayer(Player):
         self.process = multiprocessing.Process(target=self.run)
         self.process.start()
 
-    def is_alive(self) -> bool:
-        return super().is_alive()
-
-    def terminate(self) -> int:
-        return super().terminate()
+    @abstractmethod
+    def run(self) -> float:
+        return 0.

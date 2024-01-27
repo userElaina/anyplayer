@@ -19,7 +19,7 @@ class PyAudioPlayer(ProcessPlayer):
             return False
         return True
 
-    def run(self) -> int:
+    def run(self) -> float:
         CHUNK = 1024
         with self.i_wv.open(self.audio, 'rb') as wf:
             p = self.i_pa()
@@ -35,6 +35,7 @@ class PyAudioPlayer(ProcessPlayer):
                 data = wf.readframes(CHUNK)
             stream.close()
             p.terminate()
+        return 0.
 
 
 add_player(PyAudioPlayer)

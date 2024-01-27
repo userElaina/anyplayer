@@ -9,7 +9,7 @@ class Mpg123Player(ClPlayer):
     alias = ['mpg']
 
     def __init__(self, audio: str, clk: float = 0.1) -> None:
-        super().__init__(MPG123, '', audio, clk)
+        super().__init__(MPG123, '', audio, clk)  # '-q'
 
 
 add_player(Mpg123Player)
