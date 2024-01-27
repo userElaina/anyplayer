@@ -30,6 +30,7 @@ def test(p: str, a: str) -> None:
             time.sleep(0.5)
         print('after is_alive', player.is_alive())
     print('end')
+    print()
 
 
 __FFPLAY = 'ffplay'
@@ -45,6 +46,7 @@ __AUTO = 'auto'
 print(VERSION)
 print('get_names', get_names())
 print('get_availables', get_availables())
+print()
 
 # for i in get_names():
 #     test(i, BA_WAV)
