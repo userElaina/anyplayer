@@ -12,6 +12,9 @@ class ProcessPlayer(Player):
         self.process = multiprocessing.Process(target=self.run)
         self.process.start()
 
+    def join(self) -> None:
+        self.process.join()
+
     @abstractmethod
     def run(self) -> float:
         return 0.

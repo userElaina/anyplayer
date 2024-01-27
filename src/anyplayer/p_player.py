@@ -36,6 +36,10 @@ class Player(metaclass=ABCMeta):
     def kill(self) -> int:
         return self.terminate()
 
+    def join(self) -> None:
+        while self.is_alive():
+            time.sleep(self.clk)
+
     def wait(self, s: float = -1.) -> float:
         t = time.time()
         try:
@@ -50,10 +54,6 @@ class Player(metaclass=ABCMeta):
             self.terminate()
             return time.time()-t
 
-    def join(self) -> None:
-        while self.is_alive():
-            time.sleep(self.clk)
-
     def run(self) -> float:
         self.start()
-        return self.join()
+        return self.wait()
