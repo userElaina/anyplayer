@@ -13,7 +13,7 @@ class AutoPlayer(Player):
     def __init__(
         self,
         audio: str,
-        max_wait: float = 0.5,
+        max_wait: float = 1.,
         clk: float = 0.1
     ) -> None:
         self.max_wait = max_wait
@@ -37,17 +37,20 @@ class AutoPlayer(Player):
                 except Exception as e:
                     self.process.terminate()
                 t = time.time()
-                while self.process.is_alive():
+                while not self.process.is_alive():
                     if time.time()-t > self.max_wait:
-                        return
+                        raise RuntimeError(
+                            'Not start in %.2fs' % time.time()-t
+                        )
                     time.sleep(self.clk)
+                return
             except KeyboardInterrupt:
                 self.process.terminate()
                 return
             except Exception as e:
                 self.process.terminate()
                 raise e
-        raise RuntimeError()
+        raise RuntimeError('No available player')
 
     def terminate(self) -> int:
         return self.process.terminate()
