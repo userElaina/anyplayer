@@ -13,10 +13,8 @@ class AutoPlayer(Player):
     def __init__(
         self,
         audio: str,
-        max_wait: float = 1.,
         clk: float = 0.1
     ) -> None:
-        self.max_wait = max_wait
         super().__init__(audio, clk)
 
     def is_available(self) -> bool:
@@ -36,14 +34,8 @@ class AutoPlayer(Player):
                     raise e
                 except Exception as e:
                     self.process.terminate()
-                t = time.time()
-                while not self.process.is_alive():
-                    if time.time()-t > self.max_wait:
-                        raise RuntimeError(
-                            'Not start in %.2fs' % time.time()-t
-                        )
-                    time.sleep(self.clk)
-                return
+                if self.process.is_alive():
+                    return
             except KeyboardInterrupt:
                 self.process.terminate()
                 return
