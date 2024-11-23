@@ -9,7 +9,7 @@ class PlaysoundPlayer(ProcessPlayer):
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__(audio, clk)
 
-    def is_available(self) -> bool:
+    def _is_available(self) -> bool:
         try:
             from playsound import playsound
             import os
@@ -22,7 +22,7 @@ class PlaysoundPlayer(ProcessPlayer):
             return False
         return True
 
-    def run(self) -> float:
+    def _run(self) -> float:
         self.i_ps(self.audio)
         return 0.
 

@@ -21,18 +21,18 @@ class ClPlayer(Player):
         self.head = executable + ' ' + args + '"%s"'
         super().__init__(audio, clk)
 
-    def is_available(self) -> bool:
+    def _is_available(self) -> bool:
         if which(self.executable):
             return True
         else:
             return False
 
-    def start(self) -> None:
+    def _start(self) -> None:
         self.process = subprocess.Popen(
             shlex.split(self.head % self.audio),
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL
         )
 
-    def is_alive(self) -> bool:
+    def _is_alive(self) -> bool:
         return self.process.poll() is None

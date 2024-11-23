@@ -17,10 +17,10 @@ class AutoPlayer(Player):
     ) -> None:
         super().__init__(audio, clk)
 
-    def is_available(self) -> bool:
+    def _is_available(self) -> bool:
         return True
 
-    def start(self) -> None:
+    def _start(self) -> None:
         for i in get_names():
             if i == AUTO:
                 continue
@@ -44,7 +44,7 @@ class AutoPlayer(Player):
                 raise e
         raise RuntimeError('No available player')
 
-    def terminate(self) -> int:
+    def _terminate(self) -> int:
         return self.process.terminate()
 
 

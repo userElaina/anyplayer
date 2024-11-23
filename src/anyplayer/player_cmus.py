@@ -11,14 +11,14 @@ class CmusPlayer(ClPlayer):
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__('cmus-remote', '-f', audio, clk)
 
-    def is_alive(self) -> bool:
+    def _is_alive(self) -> bool:
         return True
 
-    def terminate(self) -> int:
+    def _terminate(self) -> int:
         os.system("cmus-remote -s")
         return 0
 
-    def join(self) -> None:
+    def _join(self) -> None:
         pass
 
 

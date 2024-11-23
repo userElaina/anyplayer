@@ -9,7 +9,7 @@ class PyAudioPlayer(ProcessPlayer):
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__(audio, clk)
 
-    def is_available(self) -> bool:
+    def _is_available(self) -> bool:
         try:
             import wave
             self.i_wv = wave
@@ -19,7 +19,7 @@ class PyAudioPlayer(ProcessPlayer):
             return False
         return True
 
-    def run(self) -> float:
+    def _run(self) -> float:
         CHUNK = 1024
         with self.i_wv.open(self.audio, 'rb') as wf:
             p = self.i_pa()
