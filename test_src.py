@@ -1,7 +1,5 @@
 import time
-
-from badapple.builtin_files import BA_BA, BA_MP4, BA_MP3, BA_WAV, ba_get
-
+from badapple.builtin_files import BA_MP4, BA_MP3, BA_WAV, ba_get
 from src.anyplayer import get_player, VERSION, get_names, get_availables
 
 
@@ -32,17 +30,16 @@ def test(p: str, a: str) -> None:
     print('end')
     print()
 
-
-# CMUS = 'cmus'
-# ELISA = 'elisa'
 # FFPLAY = 'ffplay'
-# FILEMGR = 'filemgr'
-# MPG123 = 'mpg123'  # mp3
 # MPV = 'mpv'
-# PLAYSOUND = 'playsound'  # mp3+wav
-# PYAUDIO = 'pyaudio'  # mp3+wav
-# SIMPLEAUDIO = 'simpleaudio'  # wav
 # VLC = 'vlc'
+# MPG123 = 'mpg123'  # mp3
+# CMUS = 'cmus'  # mp3 mp4
+# ELISA = 'elisa'
+# FILEMGR = 'filemgr'
+# SIMPLEAUDIO = 'simpleaudio'  # wav
+# PYAUDIO = 'pyaudio'  # mp3+wav
+# PLAYSOUND = 'playsound'  # mp3+wav
 # AUTO = 'auto'
 
 print(VERSION)
