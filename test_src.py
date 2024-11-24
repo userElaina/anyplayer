@@ -1,7 +1,7 @@
 import time
+import multiprocessing
 from badapple.builtin_files import BA_MP4, BA_MP3, BA_WAV, ba_get
 from src.anyplayer import get_player, VERSION, get_names, get_availables
-
 
 def test(p: str, a: str) -> None:
     a = ba_get(a)
@@ -30,6 +30,7 @@ def test(p: str, a: str) -> None:
     print('end')
     print()
 
+
 FFPLAY = 'ffplay'
 MPV = 'mpv'
 VLC = 'vlc'
@@ -42,24 +43,27 @@ PYAUDIO = 'pyaudio'  # mp3+wav
 PLAYSOUND = 'playsound'  # mp3+wav
 AUTO = 'auto'
 
-print(VERSION)
-ss = get_names()
-print('get_names', ss)
-print('get_availables', get_availables())
-print()
+if __name__ == '__main__':
+    multiprocessing.freeze_support()
 
-for i in ss:
-    time.sleep(1)
-    if i in [MPG123, CMUS]:
-        test(i, BA_MP3)
-    elif i in [SIMPLEAUDIO]:
-        test(i, BA_WAV)
-    elif i in [PLAYSOUND, PYAUDIO]:
-        test(i, BA_MP3)
-        test(i, BA_WAV)
-    else:
-        test(i, BA_MP4)
-        test(i, BA_MP3)
-        test(i, BA_WAV)
-    print('[%s] tested' % i)
+    print(VERSION)
+    ss = get_names()
+    print('get_names', ss)
+    print('get_availables', get_availables())
     print()
+
+    for i in ss:
+        time.sleep(1)
+        if i in [MPG123, CMUS]:
+            test(i, BA_MP3)
+        elif i in [SIMPLEAUDIO]:
+            test(i, BA_WAV)
+        elif i in [PLAYSOUND, PYAUDIO]:
+            test(i, BA_MP3)
+            test(i, BA_WAV)
+        else:
+            test(i, BA_MP4)
+            test(i, BA_MP3)
+            test(i, BA_WAV)
+        print('[%s] tested' % i)
+        print()
