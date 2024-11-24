@@ -1,8 +1,10 @@
 ## anyplayer
 
-Play audio in any available way.
+A simple, minimal-hassle, few-dependency Python audio playback solution.
 
-`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `auto`
+Play audio using any of the optional dependencies you have installed.
+
+`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa` (and `auto`)
 
 ##### Installation
 
@@ -26,8 +28,24 @@ player.start()
 player.wait()
 ```
 
+##### Notice
+
+To use the `cmus` player, you need to start `cmus` in a separate terminal session first.
+
+The optional module [`simpleaudio`](https://github.com/hamiltron/py-simple-audio) has been archived and unmaintained for over three years. It has known bugs and compatibility [issues](https://github.com/hamiltron/py-simple-audio/issues/72) with **Python 3.12** or later.
+
+On **Linux**, `pyaudio` may produce noticeable noise.
+
+On **Windows**, `playsound` may fail when the same audio is played repeatedly.
+
+`filemgr` directly invokes the default file manager and may not exit cleanly.
+
 ##### Recommended Optional Dependencies
 
-Only wav audio or no audio: Python module `simpleaudio`.
+Multiple audio (& video) formats supported: command-line tool `FFmpeg` or `mpv`.
 
-Multiple audio (& video) formats supported: command-line tool `FFmpeg`.
+##### To do
+
+Optional Dependencies Documents
+
+Test on **MacOS**
