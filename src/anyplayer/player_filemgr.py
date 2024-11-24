@@ -9,7 +9,7 @@ class FilemgrPlayer(ClPlayer):
 
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         for i in ['explorer', 'dolphin', 'xdg-open']:
-            if which(self.executable):
+            if which(i):
                 break
         super().__init__(i, '', audio, clk)
 
