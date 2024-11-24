@@ -60,6 +60,8 @@ if __name__ == '__main__':
             test(i, BA_WAV)
         elif i in [PLAYSOUND, PYAUDIO]:
             test(i, BA_MP3)
+            test(i, BA_MP3)
+            test(i, BA_WAV)
             test(i, BA_WAV)
         else:
             test(i, BA_MP4)
