@@ -8,19 +8,13 @@ Options: `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound
 
 ## Usage Guidelines
 
-### Installation
+**Installation**:
 
 ```sh
-python -m pip install anyplayer
+pip install anyplayer
 ```
 
-with any supported player:
-
-```sh
-python -m pip install "anyplayer[dev]"
-```
-
-### Simple Example
+**Simple Example**:
 
 ```py
 from anyplayer import get_player
