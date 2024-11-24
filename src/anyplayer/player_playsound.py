@@ -4,14 +4,14 @@ from .dicts import add_player
 
 class PlaysoundPlayer(ProcessPlayer):
     name = 'playsound'
-    alias = list()
+    alias = ['playsound2', 'playsound3']
 
     def __init__(self, audio: str, clk: float = 0.1) -> None:
         super().__init__(audio, clk)
 
     def _is_available(self) -> bool:
         try:
-            from playsound import playsound
+            from playsound3 import playsound
             import os
             if os.name == 'posix':
                 import gi
