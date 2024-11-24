@@ -4,7 +4,7 @@ A simple, minimal-hassle, few-dependency Python audio playback solution.
 
 Play audio using any of the optional dependencies you have installed.
 
-`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa` (and `auto`)
+Options: `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa` (and `auto`)
 
 ## Usage Guidelines
 
@@ -34,7 +34,7 @@ player.wait()
 
 `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa`
 
-### FFmpeg
+### FFmpeg (Recommended)
 
 [FFmpeg](https://www.ffmpeg.org/) is a complete, cross-platform solution to record, convert and stream audio and video.
 
@@ -48,7 +48,7 @@ sudo pacman -Syu ffmpeg
 sudo apt install ffmpeg
 ```
 
-### mpv
+### mpv (Recommended)
 
 [mpv](https://mpv.io/) is a free, open source, and cross-platform media player.
 
