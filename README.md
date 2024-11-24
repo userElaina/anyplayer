@@ -1,4 +1,4 @@
-## anyplayer
+# anyplayer
 
 A simple, minimal-hassle, few-dependency Python audio playback solution.
 
@@ -6,7 +6,9 @@ Play audio using any of the optional dependencies you have installed.
 
 `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa` (and `auto`)
 
-#### Installation
+## Usage Guidelines
+
+### Installation
 
 ```sh
 python -m pip install anyplayer
@@ -18,7 +20,7 @@ with any supported player:
 python -m pip install "anyplayer[dev]"
 ```
 
-#### Simple Example
+### Simple Example
 
 ```py
 from anyplayer import get_player
@@ -28,7 +30,11 @@ player.start()
 player.wait()
 ```
 
-#### Notice
+## Optional Dependencies
+
+`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa`
+
+### Notice
 
 To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
 
@@ -40,11 +46,11 @@ On **Windows**, `playsound` may fail when the same audio is played repeatedly.
 
 `filemgr` directly invokes the default file manager and may not exit cleanly.
 
-#### Recommended Optional Dependencies
+### Recommended Optional Dependencies
 
 Multiple audio (& video) formats supported: command-line tool `FFmpeg` or `mpv`.
 
-#### To do
+## To do
 
 Optional Dependencies Documents
 
