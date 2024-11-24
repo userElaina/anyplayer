@@ -24,11 +24,11 @@ player.start()
 player.wait()
 ```
 
-### Optional Dependencies
+## Optional Dependencies
 
 `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa`
 
-#### FFmpeg (Recommended)
+### FFmpeg (Recommended)
 
 [FFmpeg](https://www.ffmpeg.org/) is a complete, cross-platform solution to record, convert and stream audio and video.
 
@@ -42,7 +42,7 @@ pacman -Syu ffmpeg
 apt install ffmpeg
 ```
 
-#### mpv (Recommended)
+### mpv (Recommended)
 
 [mpv](https://mpv.io/) is a free, open source, and cross-platform media player.
 
@@ -56,7 +56,7 @@ pacman -Syu mpv
 apt install mpv
 ```
 
-#### VLC
+### VLC
 
 [VLC](https://www.videolan.org/) is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
 
@@ -68,7 +68,7 @@ pacman -Syu vlc
 apt install vlc
 ```
 
-#### mpg123
+### mpg123
 
 [mpg123](https://www.mpg123.de/) is a fast console MPEG Audio Player and decoder library.
 
@@ -82,7 +82,7 @@ pacman -Syu mpg123
 apt install mpg123
 ```
 
-#### cmus
+### cmus
 
 [cmus](https://cmus.github.io/) is a small, fast and powerful console music player for Unix-like operating systems.
 
@@ -94,7 +94,7 @@ pacman -Syu cmus
 
 **Notice**: To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
 
-#### simpleaudio
+### simpleaudio
 
 The [simplaudio](https://github.com/hamiltron/py-simple-audio) package provides cross-platform, dependency-free audio playback capability for Python 3 on OSX, Windows, and Linux.
 
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     ...
 ```
 
-#### PyAudio
+### PyAudio
 
 [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/) provides Python bindings for PortAudio v19, the cross-platform audio I/O library.
 
@@ -135,7 +135,7 @@ pacman -Syu python-pyaudio
 
 Additionally, on **Linux**, `pyaudio` may produce significant noise during playback.
 
-#### playsound
+### playsound
 
 [playsound](https://github.com/TaylorSMarks/playsound) is a pure **Python**, cross platform, single function module with no dependencies for playing sounds. Unfortunately, the original library is not maintained anymore and doesn't accept pull requests. So we use [playsound3](https://github.com/sjmikler/playsound3) instead.
 
@@ -143,7 +143,7 @@ Additionally, on **Linux**, `pyaudio` may produce significant noise during playb
 pip install playsound3
 ```
 
-#### File Manager
+### File Manager
 
 Invokes the default file manager directly.
 
@@ -153,7 +153,7 @@ Invokes the default file manager directly.
 
 **Notice**: `filemgr` directly invokes the default file manager so may not exit cleanly.
 
-#### Elisa
+### Elisa
 
 [Elisa](https://apps.kde.org/elisa/) is KDE default music player.
 
