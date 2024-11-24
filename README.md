@@ -30,11 +30,11 @@ player.wait()
 
 ##### Notice
 
-To use the `cmus` player, you need to start `cmus` in a separate terminal session first.
+To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
 
 The optional module [`simpleaudio`](https://github.com/hamiltron/py-simple-audio) has been archived and unmaintained for over three years. It has known bugs and compatibility [issues](https://github.com/hamiltron/py-simple-audio/issues/72) with **Python 3.12** or later.
 
-On **Linux**, `pyaudio` may produce noticeable noise.
+The optional module `pyaudio` may fail to play **64-bit** WAV files, as the `wave` module does not support **64-bit** WAV audio. Additionally, on **Linux**, `pyaudio` may produce significant noise during playback.
 
 On **Windows**, `playsound` may fail when the same audio is played repeatedly.
 
