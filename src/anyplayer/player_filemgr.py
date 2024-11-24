@@ -16,7 +16,7 @@ class FilemgrPlayer(ClPlayer):
     def _is_alive(self) -> bool:
         if self.executable in ['dolphin', 'xdg-open']:
             return self.is_available()
-        return super().is_alive()
+        return super()._is_alive()
 
 
 add_player(FilemgrPlayer)
