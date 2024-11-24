@@ -30,17 +30,17 @@ def test(p: str, a: str) -> None:
     print('end')
     print()
 
-# FFPLAY = 'ffplay'
-# MPV = 'mpv'
-# VLC = 'vlc'
-# MPG123 = 'mpg123'  # mp3
-# CMUS = 'cmus'  # mp3 mp4
-# ELISA = 'elisa'
-# FILEMGR = 'filemgr'
-# SIMPLEAUDIO = 'simpleaudio'  # wav
-# PYAUDIO = 'pyaudio'  # mp3+wav
-# PLAYSOUND = 'playsound'  # mp3+wav
-# AUTO = 'auto'
+FFPLAY = 'ffplay'
+MPV = 'mpv'
+VLC = 'vlc'
+MPG123 = 'mpg123'  # mp3
+CMUS = 'cmus'  # mp3 mp4
+ELISA = 'elisa'
+FILEMGR = 'filemgr'
+SIMPLEAUDIO = 'simpleaudio'  # wav
+PYAUDIO = 'pyaudio'  # mp3+wav
+PLAYSOUND = 'playsound'  # mp3+wav
+AUTO = 'auto'
 
 print(VERSION)
 ss = get_names()
@@ -50,11 +50,11 @@ print()
 
 for i in ss:
     time.sleep(1)
-    if i in ['mpg123', 'cmus']:
+    if i in [MPG123, CMUS]:
         test(i, BA_MP3)
-    elif i in ['simpleaudio']:
+    elif i in [SIMPLEAUDIO]:
         test(i, BA_WAV)
-    elif i in ['playsound', 'pyaudio']:
+    elif i in [PLAYSOUND, PYAUDIO]:
         test(i, BA_MP3)
         test(i, BA_WAV)
     else:
@@ -63,15 +63,3 @@ for i in ss:
         test(i, BA_WAV)
     print('[%s] tested' % i)
     print()
-
-
-# test(PLAYSOUND, BA_WAV)
-# test(FFPLAY, BA_WAV)
-# test(MPV, BA_WAV)
-# test(VLC, BA_WAV)
-# test(MPG123, BA_MP3)
-# test(CMUS, BA_MP3)
-# test(SIMPLEAUDIO, BA_WAV)
-# test(PYAUDIO, BA_WAV)
-# test(PLAYSOUND, BA_WAV)
-# test(AUTO, BA_WAV)
