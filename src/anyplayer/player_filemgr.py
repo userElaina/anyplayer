@@ -14,7 +14,7 @@ class FilemgrPlayer(ClPlayer):
         super().__init__(i, '', audio, clk)
 
     def _is_alive(self) -> bool:
-        if self.executable in ['dolphin', 'xdg-open']:
+        if self.executable == 'xdg-open':
             return self.is_available()
         return super()._is_alive()
 
