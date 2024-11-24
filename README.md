@@ -15,7 +15,7 @@ python -m pip install anyplayer
 with any supported player:
 
 ```sh
-python -m pip install anyplayer[dev]
+python -m pip install "anyplayer[dev]"
 ```
 
 ##### Simple Example
