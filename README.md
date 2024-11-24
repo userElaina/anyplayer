@@ -34,6 +34,70 @@ player.wait()
 
 `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa`
 
+### FFmpeg
+
+[FFmpeg](https://www.ffmpeg.org/) is a complete, cross-platform solution to record, convert and stream audio and video.
+
+**Windows**: Download binaries from **BtbN/FFmpeg-Builds** [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) (and add it to your system **PATH**).
+
+**Linux**:
+
+```sh
+sudo pacman -Syu ffmpeg
+# or
+sudo apt install ffmpeg
+```
+
+### mpv
+
+[mpv](https://mpv.io/) is a free, open source, and cross-platform media player.
+
+**Windows**: Download binaries from [First-party builds](https://nightly.link/mpv-player/mpv/workflows/build/master) (and add it to your system **PATH**).
+
+**Linux**:
+
+```sh
+sudo pacman -Syu mpv
+# or
+sudo apt install mpv
+```
+
+### VLC
+
+[VLC](https://www.videolan.org/) is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
+
+**Linux**:
+
+```sh
+sudo pacman -Syu vlc
+# or
+sudo apt install vlc
+```
+
+### mpg123
+
+[mpg123](https://www.mpg123.de/) is a fast console MPEG Audio Player and decoder library.
+
+**Windows**: Download binaries from [First-party builds](https://www.mpg123.de/download.shtml) (and add it to your system **PATH**).
+
+**Linux**:
+
+```sh
+sudo pacman -Syu mpg123
+# or
+sudo apt install mpg123
+```
+
+### cmus
+
+[cmus](https://cmus.github.io/) is a small, fast and powerful console music player for Unix-like operating systems.
+
+**Linux**:
+
+```sh
+sudo pacman -Syu cmus
+```
+
 ### Notice
 
 To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
