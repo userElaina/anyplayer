@@ -137,7 +137,9 @@ Additionally, on **Linux**, `pyaudio` may produce significant noise during playb
 
 ### playsound
 
-[playsound](https://github.com/TaylorSMarks/playsound) is a pure **Python**, cross platform, single function module with no dependencies for playing sounds. Unfortunately, the original library is not maintained anymore and doesn't accept pull requests. So we use [playsound3](https://github.com/sjmikler/playsound3) instead.
+[playsound](https://github.com/TaylorSMarks/playsound) is a pure **Python**, cross platform, single-function module with no dependencies for playing sounds.
+
+**Notice**: However, as the original library is no longer maintained and doesn't accept pull requests, we use [playsound3](https://github.com/sjmikler/playsound3) as an alternative.
 
 ```sh
 pip install playsound3
@@ -155,8 +157,8 @@ Invokes the default file manager directly.
 
 ### Elisa
 
-[Elisa](https://apps.kde.org/elisa/) is KDE default music player.
+[Elisa](https://apps.kde.org/elisa/) is the default music player for KDE.
 
 ## To do
 
-More info for **MacOS** (Optional Dependencies, Testing, ...)
+More information specific to **MacOS** (optional dependencies, testing, ...)
