@@ -36,11 +36,13 @@ MPV = 'mpv'
 VLC = 'vlc'
 MPG123 = 'mpg123'  # mp3
 CMUS = 'cmus'  # mp3 mp4
-ELISA = 'elisa'
-FILEMGR = 'filemgr'
+APLAY = 'aplay'
+GST = 'gst'
 SIMPLEAUDIO = 'simpleaudio'  # wav
 PYAUDIO = 'pyaudio'  # mp3+wav
 PLAYSOUND = 'playsound'  # mp3+wav
+FILEMGR = 'filemgr'
+ELISA = 'elisa'
 AUTO = 'auto'
 
 if __name__ == '__main__':
@@ -52,11 +54,13 @@ if __name__ == '__main__':
     print('get_availables', get_availables())
     print()
 
+    ss = [APLAY, GST, AUTO]
+
     for i in ss:
         time.sleep(1)
         if i in [MPG123, CMUS]:
             test(i, BA_MP3)
-        elif i in [SIMPLEAUDIO]:
+        elif i in [SIMPLEAUDIO, APLAY]:
             test(i, BA_WAV)
         elif i in [PLAYSOUND, PYAUDIO]:
             test(i, BA_MP3)
