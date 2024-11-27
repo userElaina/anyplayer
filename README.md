@@ -6,7 +6,7 @@ Play audio using any of the optional dependencies you have installed.
 
 **Options** (clink to see installation instructions): [`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`gst`](#gst) [`aplay`](#alsa-aplay) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa) (and `auto`)
 
-**Note**: If you prefer the most convenient audio playback on a modern PC and don't mind the additional hard disk space (less than 256 MB ), choose the optional dependency [`ffplay`](#ffmpeg-recommended) .
+**Note**: If you prefer the most convenient audio playback on a modern PC and don't mind the additional hard disk space (less than 256 MB), choose the optional dependency [**`ffplay`**](#ffmpeg-recommended).
 
 ## Usage Guidelines
 
