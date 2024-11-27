@@ -155,7 +155,7 @@ pacman -Syu python-pyaudio
 
 **Note**: The optional module `pyaudio` may fail to play **64-bit** WAV files, as the `wave` module does not support **64-bit** WAV audio.
 
-Additionally, on **Linux**, `pyaudio` may produce significant noise during playback.
+Additionally, on ***Linux***, `pyaudio` may produce significant noise during playback.
 
 ### playsound
 
