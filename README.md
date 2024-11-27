@@ -48,7 +48,7 @@ apt install ffmpeg
 
 [mpv](https://mpv.io/) is a free, open source, and cross-platform media player.
 
-***Windows***: Download binaries from [First-party builds](https://nightly.link/mpv-player/mpv/workflows/build/master) (and add it to your system **PATH**).
+***Windows***: Download binaries from [First-party builds](https://nightly.link/mpv-player/mpv/workflows/build/master) (and add it to your `PATH`).
 
 ***Linux***:
 
@@ -74,7 +74,7 @@ apt install vlc
 
 [mpg123](https://www.mpg123.de/) is a fast console MPEG Audio Player and decoder library.
 
-***Windows***: Download binaries from [First-party builds](https://www.mpg123.de/download.shtml) (and add it to your system **PATH**).
+***Windows***: Download binaries from [First-party builds](https://www.mpg123.de/download.shtml) (and add it to your `PATH`).
 
 ***Linux***:
 
