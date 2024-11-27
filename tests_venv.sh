@@ -10,8 +10,10 @@ py1 test_src.py
 
 py -m build
 twine check dist/*
+twine upload --repository testpypi dist/*
 
-py1 -m pip install dist/*.whl
+pip1 uninstall anyplayer
+pip1 install -i https://test.pypi.org/simple/ anyplayer
 py1 test_example.py
 
 twine upload dist/*

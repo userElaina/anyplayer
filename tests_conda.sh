@@ -13,9 +13,10 @@ py test_src.py
 conda deactivate
 py -m build
 twine check dist/*
+twine upload --repository testpypi dist/*
 
 conda activate py311
-py -m pip install dist/*.whl
+pip install -i https://test.pypi.org/simple/ anyplayer
 py test_example.py
 
 conda deactivate

@@ -1,5 +1,5 @@
 from anyplayer import get_player
 
-player = get_player('auto', '../.ignore-archive/anyplayerarchive/badapple.mp3')
+player = get_player('auto', '../.ignore-archive/ba-archive/badapple.wav')
 player.start()
 player.wait()
