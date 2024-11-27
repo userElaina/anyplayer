@@ -4,7 +4,7 @@ A simple, minimal-hassle, few-dependency Python audio playback solution.
 
 Play audio using any of the optional dependencies you have installed.
 
-Options (clink it to see how to install): [`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa) (and `auto`)
+**Options** (clink to see installation instructions): [`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`gst`](#gst) [`aplay`](#alsa-aplay) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa) (and `auto`)
 
 **Note**: If you prefer the most convenient audio playback on a modern PC and don't mind the additional hard disk space (less than 256 MB ), choose the optional dependency [`ffplay`](#ffmpeg-recommended) .
 
@@ -28,7 +28,7 @@ player.wait()
 
 ## Optional Dependencies
 
-[`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa)
+[`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`gst`](#gst) [`aplay`](#alsa-aplay) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa)
 
 ### FFmpeg (Recommended)
 
@@ -95,6 +95,26 @@ pacman -Syu cmus
 ```
 
 **Note**: To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
+
+### Gst
+
+[gst-plugins-base-libs](https://archlinux.org/packages/extra/x86_64/gst-plugins-base-libs/) is a multimedia graph framework.
+
+***Linux***:
+
+```sh
+pacman -Syu gst-plugins-base-libs
+```
+
+### ALSA aplay
+
+[aplay](https://alsa.opensrc.org/Alsa-utils) is an utility for the playback of `.wav`, `.voc`, `.au` files. It's included in the official alsa-utils package.
+
+***Linux***:
+
+```sh
+pacman -Syu alsa-utils
+```
 
 ### simpleaudio
 
