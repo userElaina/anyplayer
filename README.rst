@@ -6,16 +6,15 @@ A simple, minimal-hassle, few-dependency Python audio playback solution.
 Play audio using any of the optional dependencies you have installed.
 
 **Options** (clink to see installation instructions):
-```ffplay`` <#ffmpeg-recommended>`__ ```mpv`` <#mpv-recommended>`__
-```vlc`` <#vlc>`__ ```mpg123`` <#mpg123>`__ ```cmus`` <#cmus>`__
-```gst`` <#gst>`__ ```aplay`` <#alsa-aplay>`__
-```simpleaudio`` <#simpleaudio>`__ ```pyaudio`` <#pyaudio>`__
-```playsound`` <#playsound>`__ ```filemgr`` <#file-manager>`__
-```elisa`` <#elisa>`__ (and ``auto``)
+`ffplay <#ffmpeg-recommended>`__ `mpv <#mpv-recommended>`__ `vlc <#vlc>`__
+`mpg123 <#mpg123>`__ `cmus <#cmus>`__ `gst <#gst>`__ `aplay <#alsa-aplay>`__
+`simpleaudio <#simpleaudio>`__ `pyaudio <#pyaudio>`__
+`playsound <#playsound>`__ `filemgr <#file-manager>`__ `elisa <#elisa>`__
+(and auto)
 
 **Note**: If you prefer the most convenient audio playback on a modern
 PC and don't mind the additional hard disk space (less than 256 MB),
-choose the optional dependency ```ffplay`` <#ffmpeg-recommended>`__.
+choose the optional dependency `ffplay <#ffmpeg-recommended>`__.
 
 Usage Guidelines
 ----------------
@@ -39,12 +38,10 @@ Usage Guidelines
 Optional Dependencies
 ---------------------
 
-```ffplay`` <#ffmpeg-recommended>`__ ```mpv`` <#mpv-recommended>`__
-```vlc`` <#vlc>`__ ```mpg123`` <#mpg123>`__ ```cmus`` <#cmus>`__
-```gst`` <#gst>`__ ```aplay`` <#alsa-aplay>`__
-```simpleaudio`` <#simpleaudio>`__ ```pyaudio`` <#pyaudio>`__
-```playsound`` <#playsound>`__ ```filemgr`` <#file-manager>`__
-```elisa`` <#elisa>`__
+`ffplay <#ffmpeg-recommended>`__ `mpv <#mpv-recommended>`__ `vlc <#vlc>`__
+`mpg123 <#mpg123>`__ `cmus <#cmus>`__ `gst <#gst>`__ `aplay <#alsa-aplay>`__
+`simpleaudio <#simpleaudio>`__ `pyaudio <#pyaudio>`__
+`playsound <#playsound>`__ `filemgr <#file-manager>`__ `elisa <#elisa>`__
 
 FFmpeg (Recommended)
 ~~~~~~~~~~~~~~~~~~~~
@@ -52,9 +49,9 @@ FFmpeg (Recommended)
 `FFmpeg <https://www.ffmpeg.org/>`__ is a complete, cross-platform
 solution to record, convert and stream audio and video.
 
-**Windows**: Download binaries from **BtbN/FFmpeg-Builds** `GitHub
-Releases <https://github.com/BtbN/FFmpeg-Builds/releases>`__ (and add it
-to your ``PATH``).
+**Windows**: Download binaries from **BtbN/FFmpeg-Builds**
+`GitHub Releases <https://github.com/BtbN/FFmpeg-Builds/releases>`__ (and add
+it to your ``PATH``).
 
 **Linux**:
 
@@ -104,9 +101,9 @@ mpg123
 `mpg123 <https://www.mpg123.de/>`__ is a fast console MPEG Audio Player
 and decoder library.
 
-**Windows**: Download binaries from `First-party
-builds <https://www.mpg123.de/download.shtml>`__ (and add it to your
-``PATH``).
+**Windows**: Download binaries from
+`First-party <https://www.mpg123.de/download.shtml>`__
+(and add it to your ``PATH``).
 
 **Linux**:
 
@@ -170,7 +167,7 @@ capability for Python 3 on **OSX**, **Windows**, and **Linux**.
    pacman -Syu python-simpleaudio
 
 **Note**: Unfortunately,
-```simpleaudio`` <https://github.com/hamiltron/py-simple-audio>`__ has
+`simpleaudio <https://github.com/hamiltron/py-simple-audio>`__ has
 been archived and unmaintained for over three years. It has known bugs
 and compatibility
 `issues <https://github.com/hamiltron/py-simple-audio/issues/72>`__ with
