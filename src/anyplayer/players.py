@@ -3,9 +3,11 @@ from .player_mpv import MpvPlayer
 from .player_vlc import VlcPlayer
 from .player_mpg123 import Mpg123Player
 from .player_cmus import CmusPlayer
-from .player_elisa import ElisaPlayer
-from .player_filemgr import FilemgrPlayer
+from .player_gst import GstPlayer
+from .player_aplay import AplayPlayer
 from .player_simpleaudio import SimpleaudioPlayer
 from .player_pyaudio import PyAudioPlayer
 from .player_playsound import PlaysoundPlayer
+from .player_filemgr import FilemgrPlayer
+from .player_elisa import ElisaPlayer
 from .p_auto import AutoPlayer
