@@ -4,7 +4,9 @@ A simple, minimal-hassle, few-dependency Python audio playback solution.
 
 Play audio using any of the optional dependencies you have installed.
 
-Options: `ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa` (and `auto`)
+Options (clink it to see how to install): [`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa) (and `auto`)
+
+**Note**: If you prefer the most convenient audio playback on a modern PC and don't mind the additional hard disk space (less than 256 MB ), choose the optional dependency [`ffplay`](#ffmpeg-recommended) .
 
 ## Usage Guidelines
 
@@ -26,15 +28,15 @@ player.wait()
 
 ## Optional Dependencies
 
-`ffplay` `mpv` `vlc` `mpg123` `cmus` `simpleaudio` `pyaudio` `playsound` `filemgr` `elisa`
+[`ffplay`](#ffmpeg-recommended) [`mpv`](#mpv-recommended) [`vlc`](#vlc) [`mpg123`](#mpg123) [`cmus`](#cmus) [`simpleaudio`](#simpleaudio) [`pyaudio`](#pyaudio) [`playsound`](#playsound) [`filemgr`](#file-manager) [`elisa`](#elisa)
 
 ### FFmpeg (Recommended)
 
 [FFmpeg](https://www.ffmpeg.org/) is a complete, cross-platform solution to record, convert and stream audio and video.
 
-**Windows**: Download binaries from **BtbN/FFmpeg-Builds** [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) (and add it to your system **PATH**).
+***Windows***: Download binaries from **BtbN/FFmpeg-Builds** [GitHub Releases](https://github.com/BtbN/FFmpeg-Builds/releases) (and add it to your `PATH`).
 
-**Linux**:
+***Linux***:
 
 ```sh
 pacman -Syu ffmpeg
@@ -46,9 +48,9 @@ apt install ffmpeg
 
 [mpv](https://mpv.io/) is a free, open source, and cross-platform media player.
 
-**Windows**: Download binaries from [First-party builds](https://nightly.link/mpv-player/mpv/workflows/build/master) (and add it to your system **PATH**).
+***Windows***: Download binaries from [First-party builds](https://nightly.link/mpv-player/mpv/workflows/build/master) (and add it to your system **PATH**).
 
-**Linux**:
+***Linux***:
 
 ```sh
 pacman -Syu mpv
@@ -60,7 +62,7 @@ apt install mpv
 
 [VLC](https://www.videolan.org/) is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
 
-**Linux**:
+***Linux***:
 
 ```sh
 pacman -Syu vlc
@@ -72,9 +74,9 @@ apt install vlc
 
 [mpg123](https://www.mpg123.de/) is a fast console MPEG Audio Player and decoder library.
 
-**Windows**: Download binaries from [First-party builds](https://www.mpg123.de/download.shtml) (and add it to your system **PATH**).
+***Windows***: Download binaries from [First-party builds](https://www.mpg123.de/download.shtml) (and add it to your system **PATH**).
 
-**Linux**:
+***Linux***:
 
 ```sh
 pacman -Syu mpg123
@@ -86,17 +88,17 @@ apt install mpg123
 
 [cmus](https://cmus.github.io/) is a small, fast and powerful console music player for Unix-like operating systems.
 
-**Linux**:
+***Linux***:
 
 ```sh
 pacman -Syu cmus
 ```
 
-**Notice**: To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
+**Note**: To use the optional player `cmus`, ensure `cmus` is running in a separate terminal session.
 
 ### simpleaudio
 
-The [simplaudio](https://github.com/hamiltron/py-simple-audio) package provides cross-platform, dependency-free audio playback capability for Python 3 on OSX, Windows, and Linux.
+The [simplaudio](https://github.com/hamiltron/py-simple-audio) package provides cross-platform, dependency-free audio playback capability for Python 3 on ***OSX***, ***Windows***, and ***Linux***.
 
 ```sh
 pip install simplaudio
@@ -104,11 +106,11 @@ pip install simplaudio
 pacman -Syu python-simpleaudio
 ```
 
-**Notice**: Unfortunately, the optional module [`simpleaudio`](https://github.com/hamiltron/py-simple-audio) has been archived and unmaintained for over three years. It has known bugs and compatibility [issues](https://github.com/hamiltron/py-simple-audio/issues/72) with **Python 3.12** or later.
+**Note**: Unfortunately, [`simpleaudio`](https://github.com/hamiltron/py-simple-audio) has been archived and unmaintained for over three years. It has known bugs and compatibility [issues](https://github.com/hamiltron/py-simple-audio/issues/72) with ***Python 3.12*** or later.
 
 (A segmentation fault will occur when audio playback is completed or aborted. This can be used if you are only playing once and have no other tasks after the playback stops.)
 
-Additionally, on **Windows**, ensure you call `multiprocessing.freeze_support()` immediately after the `if __name__ == '__main__':` line in the main module:
+Additionally, on ***Windows***, ensure you call `multiprocessing.freeze_support()` immediately after the `if __name__ == '__main__':` line in the main module:
 
 ```py
 # main.py
@@ -131,7 +133,7 @@ conda install pyaudio portaudio
 pacman -Syu python-pyaudio
 ```
 
-**Notice**: The optional module `pyaudio` may fail to play **64-bit** WAV files, as the `wave` module does not support **64-bit** WAV audio.
+**Note**: The optional module `pyaudio` may fail to play **64-bit** WAV files, as the `wave` module does not support **64-bit** WAV audio.
 
 Additionally, on **Linux**, `pyaudio` may produce significant noise during playback.
 
@@ -139,7 +141,7 @@ Additionally, on **Linux**, `pyaudio` may produce significant noise during playb
 
 [playsound](https://github.com/TaylorSMarks/playsound) is a pure **Python**, cross platform, single-function module with no dependencies for playing sounds.
 
-**Notice**: However, as the original library is no longer maintained and doesn't accept pull requests, we use [playsound3](https://github.com/sjmikler/playsound3) as an alternative.
+**Note**: However, as the original module is no longer maintained and doesn't accept pull requests, we use [playsound3](https://github.com/sjmikler/playsound3) as an alternative.
 
 ```sh
 pip install playsound3
@@ -149,16 +151,16 @@ pip install playsound3
 
 Invokes the default file manager directly.
 
-**Windows**: `explorer.exe`.
+***Windows***: `explorer.exe`.
 
-**Linux**: `dolphin` or `xdg-open`.
+***Linux***: `dolphin` or `xdg-open`.
 
-**Notice**: `filemgr` directly invokes the default file manager so may not exit cleanly.
+**Note**: `filemgr` directly invokes the default file manager so may not exit cleanly.
 
 ### Elisa
 
-[Elisa](https://apps.kde.org/elisa/) is the default music player for KDE.
+[Elisa](https://apps.kde.org/elisa/) is the default music player for **KDE**.
 
 ## To do
 
-More information specific to **MacOS** (optional dependencies, testing, ...)
+More information specific to ***OSX*** (optional dependencies, testing, ...)
