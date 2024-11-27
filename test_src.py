@@ -54,8 +54,6 @@ if __name__ == '__main__':
     print('get_availables', get_availables())
     print()
 
-    ss = [APLAY, GST, AUTO]
-
     for i in ss:
         time.sleep(1)
         if i in [MPG123, CMUS]:
