@@ -1,7 +1,7 @@
 [project]
 name = "anyplayer"
 version = "0.0.7"
-description = "play audio in any available way"
+description = "A simple, minimal-hassle, few-dependency Python audio playback solution"
 readme = "README.rst"
 requires-python = ">=3.7"
 license = {file = "LICENSE"}
@@ -18,7 +18,7 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["simpleaudio", "pyaudio", "playsound2"]
+dev = ["simpleaudio", "pyaudio", "playsound3"]
 
 [project.urls]
 "Homepage" = "https://github.com/userElaina/anyplayer"
