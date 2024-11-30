@@ -3,6 +3,7 @@ import multiprocessing
 from badapple.builtin_files import BA_MP4, BA_MP3, BA_WAV, ba_get
 from src.anyplayer import get_player, VERSION, get_names, get_availables
 
+
 def test(p: str, a: str) -> None:
     a = ba_get(a)
     # print(a)
