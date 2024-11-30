@@ -1,6 +1,7 @@
 from .p_cl import ClPlayer
 from .dicts import add_player
 
+
 class GstPlayer(ClPlayer):
     name = 'gst'
     alias = list()
